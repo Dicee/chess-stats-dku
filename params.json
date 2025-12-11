@@ -28,6 +28,18 @@
   "projectType": "REGULAR",
   "projectAppType": "APP_TEMPLATE",
   "hasSetupSection": false,
+  "bundleContainerSettings": {
+    "remapping": {
+      "connections": [],
+      "codeEnvs": [],
+      "containerExecs": [],
+      "enableContainerExecRemapping": false
+    },
+    "codeEnvsBehavior": {
+      "envImportSpecificationMode": "SPECIFIED",
+      "importTimeMode": "INSTALL_IF_MISS"
+    }
+  },
   "owner": "david.courtinot@dataiku.com",
   "permissionsVersion": "V2",
   "permissions": [],
