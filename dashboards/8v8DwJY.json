@@ -140,9 +140,133 @@
       "enableCrossFilters": true,
       "backgroundColor": "#ffffff",
       "showFilterPanel": true,
+      "filters": [
+        {
+          "filterType": "ALPHANUM_FACET",
+          "filterSelectionType": "MULTI_SELECT",
+          "facetSorting": "COUNT_DESC",
+          "id": "1765456654508_65",
+          "column": "opening_family",
+          "label": "opening_family",
+          "columnType": "ALPHANUM",
+          "isA": "filter",
+          "excludedValues": {},
+          "isAGlobalFilter": true,
+          "useMinimalUi": false,
+          "excludeOtherValues": false,
+          "allValuesInSample": false,
+          "active": true,
+          "includeEmptyValues": true
+        },
+        {
+          "filterType": "ALPHANUM_FACET",
+          "filterSelectionType": "MULTI_SELECT",
+          "facetSorting": "COUNT_DESC",
+          "id": "1765456629602_64",
+          "column": "time_control",
+          "label": "time_control",
+          "columnType": "ALPHANUM",
+          "isA": "filter",
+          "excludedValues": {},
+          "isAGlobalFilter": true,
+          "useMinimalUi": false,
+          "excludeOtherValues": false,
+          "allValuesInSample": false,
+          "active": true,
+          "includeEmptyValues": true
+        },
+        {
+          "filterType": "DATE_FACET",
+          "id": "1765456629602_61",
+          "column": "date",
+          "label": "date",
+          "columnType": "DATE",
+          "dateFilterType": "RELATIVE",
+          "isA": "filter",
+          "isAGlobalFilter": true,
+          "useMinimalUi": false,
+          "excludeOtherValues": false,
+          "allValuesInSample": false,
+          "active": true,
+          "includeEmptyValues": true
+        },
+        {
+          "filterType": "ALPHANUM_FACET",
+          "filterSelectionType": "MULTI_SELECT",
+          "facetSorting": "COUNT_DESC",
+          "id": "1765456629602_62",
+          "column": "color",
+          "label": "color",
+          "columnType": "ALPHANUM",
+          "isA": "filter",
+          "excludedValues": {},
+          "isAGlobalFilter": true,
+          "useMinimalUi": false,
+          "excludeOtherValues": false,
+          "allValuesInSample": false,
+          "active": true,
+          "includeEmptyValues": true
+        },
+        {
+          "filterType": "NUMERICAL_FACET",
+          "filterSelectionType": "RANGE_OF_VALUES",
+          "id": "1765456629602_63",
+          "column": "elo",
+          "label": "elo",
+          "columnType": "NUMERICAL",
+          "isA": "filter",
+          "isAGlobalFilter": true,
+          "useMinimalUi": false,
+          "excludeOtherValues": false,
+          "allValuesInSample": false,
+          "active": true,
+          "includeEmptyValues": true
+        },
+        {
+          "filterType": "ALPHANUM_FACET",
+          "filterSelectionType": "MULTI_SELECT",
+          "facetSorting": "COUNT_DESC",
+          "id": "1765456654508_66",
+          "column": "result",
+          "label": "result",
+          "columnType": "ALPHANUM",
+          "isA": "filter",
+          "excludedValues": {},
+          "isAGlobalFilter": true,
+          "useMinimalUi": false,
+          "excludeOtherValues": false,
+          "allValuesInSample": false,
+          "active": true,
+          "includeEmptyValues": true
+        }
+      ],
       "filtersParams": {
         "panelPosition": "TOP",
-        "engineType": "LINO"
+        "datasetSmartName": "games_with_opening_metadata_dedup",
+        "engineType": "LINO",
+        "refreshableSelection": {
+          "selection": {
+            "useMemTable": false,
+            "filter": {
+              "distinct": false,
+              "enabled": false
+            },
+            "partitionSelectionMethod": "ALL",
+            "latestPartitionsN": 1,
+            "ordering": {
+              "enabled": false,
+              "rules": []
+            },
+            "samplingMethod": "FULL",
+            "maxRecords": -1,
+            "targetRatio": 0.02,
+            "ascending": true,
+            "withinFirstN": -1,
+            "maxReadUncompressedBytes": -1
+          },
+          "autoRefreshSample": false,
+          "_refreshTrigger": 1765456590159
+        }
       }
     }
   ],
