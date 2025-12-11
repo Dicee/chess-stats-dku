@@ -1,0 +1,145 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL",
+      "list": [
+        {
+          "name": "opening_family",
+          "d": true
+        },
+        {
+          "name": "opening_name",
+          "d": true
+        },
+        {
+          "name": "color",
+          "d": true
+        },
+        {
+          "name": "opening_moves",
+          "d": true
+        },
+        {
+          "name": "total_games_count",
+          "d": true
+        },
+        {
+          "name": "wins",
+          "d": true
+        },
+        {
+          "name": "draws",
+          "d": true
+        },
+        {
+          "name": "losses",
+          "d": true
+        },
+        {
+          "name": "opening_games_count",
+          "d": true
+        },
+        {
+          "name": "loss_percentage",
+          "d": true
+        },
+        {
+          "name": "weakness_rank",
+          "d": true
+        }
+      ]
+    },
+    "columnOrder": [
+      {
+        "reorderAction": "AFTER_COLUMN",
+        "movedColumn": "draws",
+        "referenceColumn": "losses"
+      }
+    ],
+    "columnWidthsByName": {
+      "opening_family": 274,
+      "opening_name": 300,
+      "color": 100,
+      "opening_moves": 300,
+      "total_games_count": 143,
+      "wins": 100,
+      "draws": 100,
+      "losses": 134,
+      "opening_games_count": 158,
+      "loss_percentage": 155,
+      "weakness_rank": 113
+    },
+    "columnUseScientificNotationByName": {},
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "individualColumnsRules": [],
+      "valueColoringMode": "HASH",
+      "coloringGroups": []
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxRecordsForDisplay": -1,
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [],
+  "interactiveSearch": {
+    "savedQueries": []
+  },
+  "customMeasures": [],
+  "reusableDimensions": []
+}
