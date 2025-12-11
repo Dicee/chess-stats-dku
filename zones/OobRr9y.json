@@ -69,6 +69,10 @@
     {
       "objectId": "games_exploded_by_moves_prefix",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_games_exploded_by_moves_prefix",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
