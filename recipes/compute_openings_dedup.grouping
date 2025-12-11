@@ -145,7 +145,12 @@
     }
   },
   "enlargeYourBits": true,
-  "outputColumnNameOverrides": {},
+  "outputColumnNameOverrides": {
+    "eco_last": "eco",
+    "opening_name_last": "opening_name",
+    "source_last": "source",
+    "trustworthiness_last": "trustworthiness"
+  },
   "computedColumns": [],
   "postFilter": {
     "$status": {
