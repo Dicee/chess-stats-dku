@@ -26,7 +26,7 @@
     "objects": []
   },
   "projectType": "REGULAR",
-  "projectAppType": "REGULAR",
+  "projectAppType": "APP_TEMPLATE",
   "hasSetupSection": false,
   "owner": "david.courtinot@dataiku.com",
   "permissionsVersion": "V2",
