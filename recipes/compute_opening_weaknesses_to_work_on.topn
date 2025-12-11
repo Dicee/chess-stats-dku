@@ -1,13 +1,53 @@
 {
   "preFilter": {
+    "uiData": {
+      "mode": "CUSTOM",
+      "$latestOperator": "\u0026\u0026",
+      "$filterOptions": "CUSTOM",
+      "conditions": [
+        {
+          "input": "opening_family",
+          "col": "opening_name",
+          "$showList": false,
+          "operator": "contains"
+        }
+      ]
+    },
+    "expression": "wins \u003c losses  \u0026\u0026 opening_games_count \u003e 10",
+    "$status": {
+      "validated": true,
+      "fullyTranslated": true,
+      "ok": true,
+      "sql": "\"wins\" \u003c \"losses\" AND \"opening_games_count\" \u003e 10"
+    },
     "distinct": false,
-    "enabled": false
+    "enabled": true
   },
   "retrievedColumnsSelectionMode": "ALL",
-  "firstRows": 1,
-  "keys": [],
-  "computedColumns": [],
-  "retrievedColumns": [],
+  "firstRows": 30,
+  "keys": [
+    "color"
+  ],
+  "computedColumns": [
+    {
+      "mode": "GREL",
+      "name": "loss_percentage",
+      "expr": "losses / opening_games_count * 100",
+      "type": "double"
+    }
+  ],
+  "retrievedColumns": [
+    "opening_family",
+    "opening_name",
+    "color",
+    "opening_moves",
+    "total_games_count",
+    "wins",
+    "draws",
+    "losses",
+    "opening_games_count",
+    "loss_percentage"
+  ],
   "lastRows": 0,
   "duplicateCount": false,
   "engineParams": {
@@ -48,8 +88,19 @@
     }
   },
   "rank": false,
-  "denseRank": false,
-  "orders": [],
+  "denseRank": true,
+  "orders": [
+    {
+      "column": "loss_percentage",
+      "desc": false
+    },
+    {
+      "column": "opening_games_count",
+      "desc": false
+    }
+  ],
   "rowNumber": false,
-  "outputColumnNameOverrides": {}
+  "outputColumnNameOverrides": {
+    "_dense_rank": "weakness_rank"
+  }
 }
