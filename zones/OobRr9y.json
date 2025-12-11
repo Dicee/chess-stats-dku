@@ -57,6 +57,14 @@
     {
       "objectId": "games",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "games_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_games_prepared",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
