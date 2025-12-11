@@ -1,4 +1,43 @@
 {
+  "uiData": {
+    "mode": "\u0026\u0026",
+    "$latestOperator": "\u0026\u0026",
+    "$filterOptions": "rules",
+    "conditions": [
+      {
+        "date": "2024-01-01",
+        "input": "date",
+        "col": "date",
+        "$showList": false,
+        "time": "00:00",
+        "operator": "\u003e\u003d [date]"
+      },
+      {
+        "date": "2025-12-11",
+        "input": "time_control",
+        "col": "link",
+        "$showList": false,
+        "num": 0,
+        "time": "00:00",
+        "items": [
+          {
+            "string": "Daily",
+            "num": 0
+          },
+          {
+            "string": "Rapid",
+            "num": 0
+          },
+          {
+            "string": "Blitz",
+            "num": 0
+          }
+        ],
+        "operator": "in [string]"
+      }
+    ]
+  },
+  "$status": {},
   "distinct": false,
-  "enabled": false
+  "enabled": true
 }
