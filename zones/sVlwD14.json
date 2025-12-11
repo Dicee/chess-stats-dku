@@ -1,7 +1,28 @@
 {
   "name": "games",
   "color": "#31439C",
-  "items": [],
+  "items": [
+    {
+      "objectId": "games",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "games_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "games_exploded_by_moves_prefix",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_games_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_games_exploded_by_moves_prefix",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],

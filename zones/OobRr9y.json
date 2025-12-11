@@ -53,26 +53,6 @@
     {
       "objectId": "compute_openings_dedup",
       "objectType": "RECIPE"
-    },
-    {
-      "objectId": "games",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "games_prepared",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "compute_games_prepared",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "games_exploded_by_moves_prefix",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "compute_games_exploded_by_moves_prefix",
-      "objectType": "RECIPE"
     }
   ],
   "shared": [],
