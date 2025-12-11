@@ -94,7 +94,7 @@
   "schema": {
     "columns": [
       {"name":"link","type":"string"},
-      {"name":"date","type":"string"},
+      {"name":"date","type":"dateonly"},
       {"name":"color","type":"string"},
       {"name":"elo","type":"bigint"},
       {"name":"time_control","type":"string"},
