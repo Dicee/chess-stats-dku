@@ -13,7 +13,7 @@
     "exportAllInputManagedFolders": false,
     "exportKnowledgeBank": false,
     "exportPromptStudioHistories": false,
-    "exportInsightsData": true,
+    "exportInsightsData": false,
     "includedDatasetsData": [
       {
         "name": "openings_dedup",
