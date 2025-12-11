@@ -92,7 +92,19 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {"name":"opening_family","type":"string"},
+      {"name":"opening_name","type":"string"},
+      {"name":"color","type":"string"},
+      {"name":"opening_moves","type":"string"},
+      {"name":"total_games_count","type":"bigint"},
+      {"name":"wins","type":"bigint"},
+      {"name":"draws","type":"bigint"},
+      {"name":"losses","type":"double"},
+      {"name":"opening_games_count","type":"bigint"},
+      {"name":"loss_percentage","type":"double"},
+      {"name":"weakness_rank","type":"bigint"}
+    ],
     "userModified": true
   },
   "typeSystemVersion": "V2",
