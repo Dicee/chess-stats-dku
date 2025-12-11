@@ -52,28 +52,24 @@
             {
               "type": "NATURAL",
               "label": "Natural ordering",
-              "sortAscending": true,
-              "$$hashKey": "object:32393"
+              "sortAscending": true
             },
             {
               "type": "AGGREGATION",
               "measureIdx": 0,
-              "label": "Count of records, descending",
-              "$$hashKey": "object:32394"
+              "label": "Count of records, descending"
             },
             {
               "type": "AGGREGATION",
               "measureIdx": 0,
               "sortAscending": true,
-              "label": "Count of records, ascending",
-              "$$hashKey": "object:32395"
+              "label": "Count of records, ascending"
             }
           ],
           "sort": {
             "type": "AGGREGATION",
             "measureIdx": 0,
-            "label": "Count of records, descending",
-            "$$hashKey": "object:32394"
+            "label": "Count of records, descending"
           },
           "prefix": "",
           "suffix": "",
@@ -106,28 +102,24 @@
             {
               "type": "NATURAL",
               "label": "Natural ordering",
-              "sortAscending": true,
-              "$$hashKey": "object:32298"
+              "sortAscending": true
             },
             {
               "type": "AGGREGATION",
               "measureIdx": 0,
-              "label": "Count of records, descending",
-              "$$hashKey": "object:32299"
+              "label": "Count of records, descending"
             },
             {
               "type": "AGGREGATION",
               "measureIdx": 0,
               "sortAscending": true,
-              "label": "Count of records, ascending",
-              "$$hashKey": "object:32300"
+              "label": "Count of records, ascending"
             }
           ],
           "sort": {
             "type": "NATURAL",
             "label": "Natural ordering",
-            "sortAscending": true,
-            "$$hashKey": "object:32298"
+            "sortAscending": true
           },
           "prefix": "",
           "suffix": "",
@@ -249,26 +241,6 @@
           "filterType": "ALPHANUM_FACET",
           "filterSelectionType": "MULTI_SELECT",
           "facetSorting": "COUNT_DESC",
-          "id": "1765457399227_70",
-          "column": "time_control",
-          "label": "time_control",
-          "columnType": "ALPHANUM",
-          "isA": "filter",
-          "excludedValues": {
-            "Bullet": true,
-            "___dku_no_value___": true
-          },
-          "isAGlobalFilter": false,
-          "useMinimalUi": false,
-          "excludeOtherValues": false,
-          "allValuesInSample": false,
-          "active": true,
-          "includeEmptyValues": true
-        },
-        {
-          "filterType": "ALPHANUM_FACET",
-          "filterSelectionType": "MULTI_SELECT",
-          "facetSorting": "COUNT_DESC",
           "id": "1765457098431_68",
           "column": "color",
           "label": "color",
@@ -277,26 +249,6 @@
           "excludedValues": {
             "White": true
           },
-          "isAGlobalFilter": false,
-          "useMinimalUi": false,
-          "excludeOtherValues": false,
-          "allValuesInSample": false,
-          "active": true,
-          "includeEmptyValues": true
-        },
-        {
-          "filterType": "DATE_FACET",
-          "filterSelectionType": "RANGE_OF_VALUES",
-          "facetSorting": "NATURAL_ORDER_ASC",
-          "id": "1765457205535_69",
-          "column": "date",
-          "label": "date",
-          "columnType": "DATE",
-          "dateFilterType": "RANGE",
-          "minValue": 1.7040672E12,
-          "maxValue": 1.7654112E12,
-          "timezone": "UTC",
-          "isA": "filter",
           "isAGlobalFilter": false,
           "useMinimalUi": false,
           "excludeOtherValues": false,
@@ -719,7 +671,6 @@
         },
         "displayPointer": false
       },
-      "thumbnailData": "data:image/png;base64,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\u003d\u003d",
       "useLiveProcessingIfAvailable": true,
       "legendPlacement": "OUTER_RIGHT",
       "legendFormatting": {
