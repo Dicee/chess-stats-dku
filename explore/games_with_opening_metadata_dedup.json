@@ -625,7 +625,7 @@
             "additionalMeasures": []
           }
         },
-        "chartHeight": 200,
+        "chartHeight": 299,
         "singleXAxis": true,
         "multiTooltips": false,
         "animationFrameDuration": 3000,
