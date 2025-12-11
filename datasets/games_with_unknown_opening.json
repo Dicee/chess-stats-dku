@@ -102,10 +102,7 @@
       {"name":"result","type":"string"},
       {"name":"opening_family","type":"string"},
       {"name":"eco","type":"string"},
-      {"name":"game_moves","type":"string"},
-      {"name":"opening_moves","type":"string"},
-      {"name":"opening_name","type":"string"},
-      {"name":"opening_source","type":"string"}
+      {"name":"game_moves","type":"string"}
     ],
     "userModified": true
   },
