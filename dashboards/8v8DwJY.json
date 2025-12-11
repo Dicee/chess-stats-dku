@@ -132,8 +132,9 @@
           }
         ]
       },
+      "title": "Overview",
       "show": true,
-      "showTitle": false,
+      "showTitle": true,
       "titleAlign": "CENTER",
       "titleFontColor": "#444444",
       "titleFontSize": 28,
@@ -267,6 +268,24 @@
           "autoRefreshSample": false,
           "_refreshTrigger": 1765456590159
         }
+      }
+    },
+    {
+      "id": "gq3MC1m",
+      "grid": {
+        "tiles": []
+      },
+      "title": "Deep dive: Caro-Kann as black",
+      "show": true,
+      "showTitle": true,
+      "titleAlign": "CENTER",
+      "titleFontColor": "#444444",
+      "titleFontSize": 28,
+      "enableCrossFilters": true,
+      "backgroundColor": "#FFFFFF",
+      "showFilterPanel": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
       }
     }
   ],
