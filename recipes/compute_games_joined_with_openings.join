@@ -6,76 +6,106 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "game_moves_prefix",
+            "table": 0
+          },
+          "dateDiffUnit": "SECOND",
+          "column2": {
+            "name": "opening_moves",
+            "table": 1
+          },
+          "type": "EQ"
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "link",
+      "type": "string",
       "table": 0
     },
     {
       "name": "date",
+      "type": "string",
       "table": 0
     },
     {
       "name": "color",
+      "type": "string",
       "table": 0
     },
     {
       "name": "elo",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "time_control",
+      "type": "string",
       "table": 0
     },
     {
       "name": "termination",
+      "type": "string",
       "table": 0
     },
     {
       "name": "result",
+      "type": "string",
       "table": 0
     },
     {
       "name": "opening_family",
+      "type": "string",
       "table": 0
     },
     {
       "name": "eco",
+      "type": "string",
       "table": 0
     },
     {
       "name": "game_moves",
+      "type": "string",
       "table": 0
     },
     {
       "name": "game_moves_prefix",
+      "type": "string",
       "table": 0
     },
     {
       "name": "game_moves_prefix_length",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "opening_moves",
+      "type": "string",
       "table": 1
     },
     {
       "name": "opening_name",
+      "type": "string",
       "table": 1
     },
     {
       "name": "source",
+      "type": "string",
       "table": 1
     },
     {
       "name": "trustworthiness",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "count",
+      "type": "bigint",
       "table": 1
     }
   ],
@@ -139,5 +169,83 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "link",
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "type": "string"
+          },
+          {
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "name": "elo",
+            "type": "bigint"
+          },
+          {
+            "name": "time_control",
+            "type": "string"
+          },
+          {
+            "name": "termination",
+            "type": "string"
+          },
+          {
+            "name": "result",
+            "type": "string"
+          },
+          {
+            "name": "opening_family",
+            "type": "string"
+          },
+          {
+            "name": "eco",
+            "type": "string"
+          },
+          {
+            "name": "game_moves",
+            "type": "string"
+          },
+          {
+            "name": "game_moves_prefix",
+            "type": "string"
+          },
+          {
+            "name": "game_moves_prefix_length",
+            "type": "bigint"
+          },
+          {
+            "name": "opening_moves",
+            "type": "string"
+          },
+          {
+            "name": "opening_name",
+            "type": "string"
+          },
+          {
+            "name": "source",
+            "type": "string"
+          },
+          {
+            "name": "trustworthiness",
+            "type": "bigint"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
