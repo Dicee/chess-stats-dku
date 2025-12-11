@@ -94,7 +94,18 @@
   "schema": {
     "columns": [
       {"name":"link","type":"string"},
-      {"name":"count","type":"bigint"}
+      {"name":"date","type":"dateonly"},
+      {"name":"color","type":"string"},
+      {"name":"elo","type":"bigint"},
+      {"name":"time_control","type":"string"},
+      {"name":"termination","type":"string"},
+      {"name":"result","type":"string"},
+      {"name":"opening_family","type":"string"},
+      {"name":"eco","type":"string"},
+      {"name":"game_moves","type":"string"},
+      {"name":"opening_moves","type":"string"},
+      {"name":"opening_name","type":"string"},
+      {"name":"opening_source","type":"string"}
     ],
     "userModified": true
   },
