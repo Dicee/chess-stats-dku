@@ -53,6 +53,11 @@
           "scenarioId": "BUILDGAMEANALYSIS",
           "type": "SCENARIO_RUN",
           "prompt": "Start analysis"
+        },
+        {
+          "dashboardId": "8v8DwJY",
+          "type": "DASHBOARD_LINK",
+          "prompt": "Review opening performance"
         }
       ]
     }
