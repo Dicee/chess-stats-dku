@@ -33,6 +33,14 @@
     {
       "objectId": "games_relevant_for_weakness_analysis",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_games_relevant_for_weakness_analysis_with_games_count",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "games_relevant_for_weakness_analysis_with_games_count",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
