@@ -645,10 +645,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 0,
+              "top": 2,
               "left": 0,
-              "width": 8,
-              "height": 8
+              "width": 17,
+              "height": 11
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -687,10 +687,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 0,
-              "left": 8,
-              "width": 8,
-              "height": 8
+              "top": 13,
+              "left": 0,
+              "width": 17,
+              "height": 11
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -725,12 +725,47 @@
             "tileSpacing": 8,
             "padding": 0,
             "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "TEXT",
+            "box": {
+              "top": 0,
+              "left": 0,
+              "width": 36,
+              "height": 2
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "text": "Top weaknesses are the top opening lines for which the player has scored more losses than wins. Only recent games are taken it account (all games since Jan 2024), and only lines that have been played more than 10 times are considered. Bullet games are excluded from this analysis as well. Finally, this does not take transpositions into account, as the aggregation relies on the exact same move order being played.\n\nTo figure out which weakness to proritize, a combination of looking at the number of games played, as well as how high the loss percentage was on those games, is required. A high failure rate on a rare line may not be as impactful as a slightly better score on a more common line.",
+              "textAlign": "LEFT",
+              "verticalAlign": "TOP"
+            },
+            "backgroundOpacity": 1.0,
+            "backgroundColor": "#ffffff",
+            "autoLoad": true,
+            "locked": false,
+            "borderOptions": {
+              "color": "#CCCCCC",
+              "radius": 0,
+              "size": 1
+            },
+            "titleOptions": {
+              "showTitle": "NO",
+              "title": "Interpretation",
+              "fontColor": "#000000",
+              "fontSize": 13
+            },
+            "displayMode": "INSIGHT",
+            "useDashboardSpacing": true,
+            "tileSpacing": 8,
+            "padding": 0,
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
       "title": "Deep-dive: top opening weaknesses",
       "show": true,
-      "showTitle": false,
+      "showTitle": true,
       "titleAlign": "CENTER",
       "titleFontColor": "#444444",
       "titleFontSize": 28,
