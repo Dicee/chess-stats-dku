@@ -49,6 +49,14 @@
     {
       "objectId": "games_outcomes_by_opening_name",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_opening_weaknesses_to_work_on",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "opening_weaknesses_to_work_on",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
