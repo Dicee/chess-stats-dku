@@ -98,12 +98,11 @@
       {"name":"color","type":"string"},
       {"name":"elo","type":"bigint"},
       {"name":"time_control","type":"string"},
-      {"name":"variant","type":"string"},
       {"name":"termination","type":"string"},
       {"name":"result","type":"string"},
       {"name":"opening_family","type":"string"},
       {"name":"eco","type":"string"},
-      {"name":"moves","type":"string"}
+      {"name":"game_moves","type":"string"}
     ],
     "userModified": true
   },
