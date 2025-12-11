@@ -5,162 +5,210 @@
   },
   "keys": [
     {
-      "column": "link"
+      "last": false,
+      "max": false,
+      "column": "link",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "median": false,
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "date",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "dateonly",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "color",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "elo",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "time_control",
       "count": false,
+      "$idx": 3,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "termination",
       "count": false,
+      "$idx": 4,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "result",
       "count": false,
+      "$idx": 5,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "opening_family",
       "count": false,
+      "$idx": 6,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "eco",
       "count": false,
+      "$idx": 7,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "game_moves",
       "count": false,
+      "$idx": 8,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
       "last": false,
@@ -168,8 +216,10 @@
       "firstLastNotNull": false,
       "column": "game_moves_prefix",
       "count": false,
+      "$idx": 9,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -185,67 +235,83 @@
       "firstLastNotNull": false,
       "column": "game_moves_prefix_length",
       "count": false,
+      "$idx": 10,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "link"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "opening_moves",
       "count": false,
+      "$idx": 11,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "opening_name",
       "count": false,
+      "$idx": 12,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "source",
       "count": false,
+      "$idx": 13,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "game_moves_prefix_length"
     },
     {
       "last": false,
@@ -253,8 +319,10 @@
       "firstLastNotNull": false,
       "column": "trustworthiness",
       "count": false,
+      "$idx": 14,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -265,7 +333,7 @@
       "first": false
     }
   ],
-  "globalCount": true,
+  "globalCount": false,
   "engineParams": {
     "hive": {
       "skipPrerunValidate": false,
@@ -304,8 +372,81 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {
+    "date_last": "date",
+    "termination_last": "termination",
+    "result_last": "result",
+    "time_control_last": "time_control",
+    "eco_last": "eco",
+    "elo_last": "elo",
+    "opening_family_last": "opening_family",
+    "opening_moves_last": "opening_moves",
+    "opening_name_last": "opening_name",
+    "color_last": "color",
+    "source_last": "opening_source",
+    "game_moves_last": "game_moves"
+  },
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "link",
+            "type": "string"
+          },
+          {
+            "name": "date_last",
+            "type": "dateonly"
+          },
+          {
+            "name": "color_last",
+            "type": "string"
+          },
+          {
+            "name": "elo_last",
+            "type": "bigint"
+          },
+          {
+            "name": "time_control_last",
+            "type": "string"
+          },
+          {
+            "name": "termination_last",
+            "type": "string"
+          },
+          {
+            "name": "result_last",
+            "type": "string"
+          },
+          {
+            "name": "opening_family_last",
+            "type": "string"
+          },
+          {
+            "name": "eco_last",
+            "type": "string"
+          },
+          {
+            "name": "game_moves_last",
+            "type": "string"
+          },
+          {
+            "name": "opening_moves_last",
+            "type": "string"
+          },
+          {
+            "name": "opening_name_last",
+            "type": "string"
+          },
+          {
+            "name": "source_last",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
