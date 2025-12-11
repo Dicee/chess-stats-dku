@@ -7,7 +7,7 @@
       {
         "date": "2024-01-01",
         "input": "date",
-        "col": "date",
+        "col": "link",
         "$showList": false,
         "time": "00:00",
         "operator": "\u003e\u003d [date]"
