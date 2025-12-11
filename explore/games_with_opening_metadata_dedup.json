@@ -2769,20 +2769,188 @@
       }
     },
     {
-      "copySelectionFromScript": true,
+      "copySelectionFromScript": false,
       "engineType": "LINO",
+      "refreshableSelection": {
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": 10000,
+          "targetRatio": 0.02,
+          "ascending": true,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        },
+        "autoRefreshSample": false,
+        "_refreshTrigger": 1765457340033
+      },
       "def": {
         "id": "bfef8fc3",
-        "type": "grouped_columns",
+        "type": "stacked_bars",
         "variant": "normal",
-        "name": "New chart",
+        "name": "Count by opening_name and result",
         "userEditedName": false,
         "displayWithEChartsByDefault": true,
-        "genericDimension0": [],
-        "genericDimension1": [],
+        "genericDimension0": [
+          {
+            "numParams": {
+              "mode": "FIXED_NB",
+              "emptyBinsMode": "ZEROS",
+              "binSize": 1.0,
+              "niceBounds": false,
+              "customBinValues": [],
+              "nbBins": 10
+            },
+            "maxValues": 20,
+            "generateOthersCategory": true,
+            "forceLastPositionOthers": false,
+            "oneTickPerBin": "AUTO",
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Count of records, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "sortAscending": true,
+                "label": "Count of records, ascending"
+              }
+            ],
+            "sort": {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Count of records, descending"
+            },
+            "multiplier": "Auto",
+            "hideTrailingZeros": true,
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "column": "opening_name",
+            "type": "ALPHANUM"
+          }
+        ],
+        "genericDimension1": [
+          {
+            "numParams": {
+              "mode": "FIXED_NB",
+              "emptyBinsMode": "ZEROS",
+              "binSize": 1.0,
+              "niceBounds": false,
+              "customBinValues": [],
+              "nbBins": 10
+            },
+            "maxValues": 20,
+            "generateOthersCategory": true,
+            "forceLastPositionOthers": false,
+            "oneTickPerBin": "AUTO",
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Count of records, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "sortAscending": true,
+                "label": "Count of records, ascending"
+              }
+            ],
+            "sort": {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Count of records, descending"
+            },
+            "multiplier": "Auto",
+            "hideTrailingZeros": true,
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "column": "result",
+            "type": "ALPHANUM"
+          }
+        ],
         "facetDimension": [],
         "animationDimension": [],
-        "genericMeasures": [],
+        "genericMeasures": [
+          {
+            "function": "COUNT",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "multiplier": "Auto",
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "hideTrailingZeros": true,
+            "showValue": true,
+            "showDisplayLabel": true,
+            "labelPosition": "BOTTOM",
+            "percentile": 50.0,
+            "isCustomPercentile": false,
+            "kpiTextAlign": "CENTER",
+            "kpiValueFontSizeMode": "RESPONSIVE",
+            "kpiValueFontSize": 32,
+            "responsiveTextAreaFill": 100,
+            "valueTextFormatting": {
+              "fontSize": 11,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "labelTextFormatting": {
+              "fontSize": 15,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "valuesInChartDisplayOptions": {
+              "displayValues": true,
+              "textFormatting": {
+                "fontSize": 11,
+                "fontColor": "AUTO",
+                "hasBackground": false,
+                "backgroundColor": "#D9D9D9BF"
+              },
+              "addDetails": false,
+              "additionalMeasures": [],
+              "placementMode": "AUTO",
+              "spacing": 12
+            },
+            "colorRules": []
+          }
+        ],
         "xDimension": [],
         "yDimension": [],
         "uaXDimension": [],
@@ -2831,6 +2999,125 @@
         "tooltipMeasures": [],
         "boxplotBreakdownDim": [],
         "boxplotValue": [],
+        "filters": [
+          {
+            "filterType": "ALPHANUM_FACET",
+            "filterSelectionType": "MULTI_SELECT",
+            "facetSorting": "COUNT_DESC",
+            "id": "1765457399227_70",
+            "column": "time_control",
+            "label": "time_control",
+            "columnType": "ALPHANUM",
+            "isA": "filter",
+            "excludedValues": {
+              "Bullet": true,
+              "___dku_no_value___": true
+            },
+            "isAGlobalFilter": false,
+            "useMinimalUi": false,
+            "excludeOtherValues": false,
+            "allValuesInSample": false,
+            "active": true,
+            "includeEmptyValues": true
+          },
+          {
+            "filterType": "ALPHANUM_FACET",
+            "filterSelectionType": "MULTI_SELECT",
+            "facetSorting": "COUNT_DESC",
+            "id": "1765457098431_68",
+            "column": "color",
+            "label": "color",
+            "columnType": "ALPHANUM",
+            "isA": "filter",
+            "excludedValues": {
+              "White": true
+            },
+            "isAGlobalFilter": false,
+            "useMinimalUi": false,
+            "excludeOtherValues": false,
+            "allValuesInSample": false,
+            "active": true,
+            "includeEmptyValues": true
+          },
+          {
+            "filterType": "DATE_FACET",
+            "filterSelectionType": "RANGE_OF_VALUES",
+            "facetSorting": "NATURAL_ORDER_ASC",
+            "id": "1765457205535_69",
+            "column": "date",
+            "label": "date",
+            "columnType": "DATE",
+            "dateFilterType": "RANGE",
+            "minValue": 1.7040672E12,
+            "maxValue": 1.7654112E12,
+            "timezone": "UTC",
+            "isA": "filter",
+            "isAGlobalFilter": false,
+            "useMinimalUi": false,
+            "excludeOtherValues": false,
+            "allValuesInSample": false,
+            "active": true,
+            "includeEmptyValues": true
+          },
+          {
+            "filterType": "ALPHANUM_FACET",
+            "filterSelectionType": "MULTI_SELECT",
+            "facetSorting": "COUNT_DESC",
+            "id": "1765457037117_67",
+            "column": "opening_family",
+            "label": "opening_family",
+            "columnType": "ALPHANUM",
+            "isA": "filter",
+            "excludedValues": {
+              "Queen\u0027s pawn game": true,
+              "Queen\u0027s gambit declined": true,
+              "Polish opening": true,
+              "English opening": true,
+              "Queen\u0027s gambit declined, 4. Bg5": true,
+              "Italian game": true,
+              "Ruy Lopez (Spanish opening)": true,
+              "Reti opening": true,
+              "Nimzovich-Larsen attack": true,
+              "King\u0027s pawn game": true,
+              "Scotch game": true,
+              "Four knights game, Scotch variation": true,
+              "Richter-Veresov attack": true,
+              "Giuoco piano": true,
+              "King\u0027s gambit": true,
+              "Vienna game": true,
+              "Bird\u0027s opening": true,
+              "Bishop\u0027s opening": true,
+              "Torre attack (Tartakower variation)": true,
+              "Queen\u0027s pawn": true,
+              "Catalan, closed": true,
+              "Evan\u0027s gambit": true,
+              "Queen\u0027s indian defence": true,
+              "Center game": true,
+              "French defence": true,
+              "Pirc defence": true,
+              "Two knights defence": true,
+              "Queen\u0027s gambit": true,
+              "Three knights game": true,
+              "Queen\u0027s gambit declined, Slav defence": true,
+              "Sicilian defence": true,
+              "Queen\u0027s gambit accepted": true,
+              "Queen\u0027s gambit declined, Chigorin defence": true,
+              "Petrov\u0027s defence": true,
+              "Dutch": true,
+              "Budapest defence": true,
+              "Scandinavian (centre counter) defence": true,
+              "Philidor\u0027s defence": true,
+              "Old Indian defence": true,
+              "Robatsch (modern) defence": true
+            },
+            "isAGlobalFilter": false,
+            "useMinimalUi": false,
+            "excludeOtherValues": false,
+            "allValuesInSample": false,
+            "active": true,
+            "includeEmptyValues": true
+          }
+        ],
         "xAxisFormatting": {
           "displayAxis": true,
           "showAxisTitle": true,
@@ -2860,6 +3147,7 @@
             "mode": "INTERVAL"
           },
           "customExtent": {
+            "editMode": "AUTO",
             "manualExtent": [
               null,
               null
@@ -2899,6 +3187,7 @@
               "mode": "INTERVAL"
             },
             "customExtent": {
+              "editMode": "AUTO",
               "manualExtent": [
                 null,
                 null
@@ -2937,6 +3226,7 @@
               "mode": "INTERVAL"
             },
             "customExtent": {
+              "editMode": "AUTO",
               "manualExtent": [
                 null,
                 null
@@ -2974,7 +3264,7 @@
         "hexbinNumber": 20,
         "hexbinRadiusMode": "NUM_HEXAGONS",
         "valuesInChartDisplayOptions": {
-          "displayValues": false,
+          "displayValues": true,
           "displayPieLabelsOrValues": true,
           "displayMode": "LABELS",
           "overlappingStrategy": "AUTO",
@@ -3022,11 +3312,12 @@
             "fixedValues": false
           },
           "customColors": {
-            "v_1-0": "#2CA02C",
-            "v_0-1": "#FF0E0E",
+            "v_0-1": "#2CA02C",
+            "v_1-0": "#FF0E0E",
             "v_1/2-1/2": "#DFE0E8"
           }
         },
+        "colorGroups": [],
         "bubblesOptions": {
           "defaultRadius": 5.0,
           "singleShape": "FILLED_CIRCLE"
@@ -3115,8 +3406,8 @@
           "lockSquareGrid": false
         },
         "mapGridOptions": {
-          "gridLonDeg": 0.6,
-          "gridLatDeg": 0.6
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
         },
         "radarOptions": {
           "filled": false,
@@ -3182,6 +3473,7 @@
           },
           "displayPointer": false
         },
+        "thumbnailData": "data:image/png;base64,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\u003d",
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
         "legendFormatting": {
@@ -3260,7 +3552,7 @@
         },
         "gridlinesOptions": {
           "vertical": {
-            "show": false,
+            "show": true,
             "lineFormatting": {
               "type": "FILLED",
               "color": "#d9d9d9",
@@ -3269,7 +3561,9 @@
           },
           "horizontal": {
             "show": false,
-            "displayAxis": {},
+            "displayAxis": {
+              "type": "LEFT_Y_AXIS"
+            },
             "lineFormatting": {
               "type": "FILLED",
               "color": "#d9d9d9",
