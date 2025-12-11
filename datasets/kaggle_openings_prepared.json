@@ -93,33 +93,11 @@
   },
   "schema": {
     "columns": [
-      {"name":"col_0","type":"bigint"},
-      {"name":"Opening","type":"string"},
-      {"name":"Colour","type":"string"},
-      {"name":"Num Games","type":"bigint"},
-      {"name":"ECO","type":"string"},
-      {"name":"Last Played","type":"dateonly"},
-      {"name":"Perf Rating","type":"bigint"},
-      {"name":"Avg Player","type":"bigint"},
-      {"name":"Player Win %","type":"double"},
-      {"name":"Draw %","type":"double"},
-      {"name":"Opponent Win %","type":"double"},
-      {"name":"Moves","type":"string","meaning":"Text"},
-      {"name":"moves_list","type":"array","arrayContent":{"type":"string"}
-      },
-      {"name":"move1w","type":"string"},
-      {"name":"move1b","type":"string"},
-      {"name":"move2w","type":"string"},
-      {"name":"move2b","type":"string"},
-      {"name":"move3w","type":"string"},
-      {"name":"move3b","type":"string"},
-      {"name":"move4w","type":"string"},
-      {"name":"move4b","type":"string"},
-      {"name":"White_win%","type":"double"},
-      {"name":"Black_win%","type":"double"},
-      {"name":"White_odds","type":"double"},
-      {"name":"White_Wins","type":"double"},
-      {"name":"Black_Wins","type":"double"}
+      {"name":"eco","type":"string"},
+      {"name":"opening_name","type":"string"},
+      {"name":"opening_moves","type":"string"},
+      {"name":"source","type":"string"},
+      {"name":"trustworthiness","type":"bigint"}
     ],
     "userModified": true
   },
