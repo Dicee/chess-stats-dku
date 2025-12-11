@@ -92,11 +92,11 @@
   "orders": [
     {
       "column": "loss_percentage",
-      "desc": false
+      "desc": true
     },
     {
       "column": "opening_games_count",
-      "desc": false
+      "desc": true
     }
   ],
   "rowNumber": false,
