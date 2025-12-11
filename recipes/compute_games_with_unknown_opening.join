@@ -4,62 +4,95 @@
       "table2": 1,
       "table1": 0,
       "conditionsMode": "AND",
-      "type": "LEFT",
+      "type": "LEFT_ANTI",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "link",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "link",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "link",
+      "type": "string",
       "table": 0
     },
     {
       "name": "date",
+      "type": "dateonly",
       "table": 0
     },
     {
       "name": "color",
+      "type": "string",
       "table": 0
     },
     {
       "name": "elo",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "time_control",
+      "type": "string",
       "table": 0
     },
     {
       "name": "termination",
+      "type": "string",
       "table": 0
     },
     {
       "name": "result",
+      "type": "string",
       "table": 0
     },
     {
       "name": "opening_family",
+      "type": "string",
       "table": 0
     },
     {
       "name": "eco",
+      "type": "string",
       "table": 0
     },
     {
       "name": "game_moves",
+      "type": "string",
       "table": 0
     },
     {
       "name": "opening_moves",
+      "type": "string",
       "table": 1
     },
     {
       "name": "opening_name",
+      "type": "string",
       "table": 1
     },
     {
       "name": "opening_source",
+      "type": "string",
       "table": 1
     }
   ],
@@ -123,5 +156,55 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "link",
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "type": "dateonly"
+          },
+          {
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "name": "elo",
+            "type": "bigint"
+          },
+          {
+            "name": "time_control",
+            "type": "string"
+          },
+          {
+            "name": "termination",
+            "type": "string"
+          },
+          {
+            "name": "result",
+            "type": "string"
+          },
+          {
+            "name": "opening_family",
+            "type": "string"
+          },
+          {
+            "name": "eco",
+            "type": "string"
+          },
+          {
+            "name": "game_moves",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
