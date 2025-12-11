@@ -1,6 +1,48 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "link"
+      },
+      {
+        "d": true,
+        "name": "date"
+      },
+      {
+        "d": true,
+        "name": "color"
+      },
+      {
+        "d": true,
+        "name": "elo"
+      },
+      {
+        "d": true,
+        "name": "time_control"
+      },
+      {
+        "d": true,
+        "name": "termination"
+      },
+      {
+        "d": true,
+        "name": "result"
+      },
+      {
+        "d": true,
+        "name": "opening_family"
+      },
+      {
+        "d": true,
+        "name": "eco"
+      },
+      {
+        "d": true,
+        "name": "game_moves"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +72,116 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "variant"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "",
+        "formats": [
+          "yyyy-MM"
+        ],
+        "columns": [
+          "date"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "en_US",
+        "outType": {
+          "type": "dateonly"
+        }
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "useDatasetForMapping": false,
+        "mapping": [
+          {
+            "from": "\\s\\{.*?\\}",
+            "to": ""
+          },
+          {
+            "from": "\\d+\\.{3} "
+          },
+          {
+            "from": "\\.\\s",
+            "to": "."
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "moves"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "PATTERN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FilterOnValue",
+      "params": {
+        "normalizationMode": "EXACT",
+        "booleanMode": "AND",
+        "columns": [
+          "eco"
+        ],
+        "values": [
+          "?"
+        ],
+        "matchingMode": "FULL_STRING",
+        "action": "REMOVE_ROW",
+        "appliesTo": "SINGLE_COLUMN",
+        "exclude": false,
+        "processNullOrEmptyValues": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "moves",
+            "to": "game_moves"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -58,7 +208,20 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "date": 100,
+    "termination": 225,
+    "result": 100,
+    "eco": 100,
+    "time_control": 105,
+    "color": 100,
+    "game_moves": 300,
+    "moves": 300,
+    "link": 300,
+    "variant": 100,
+    "elo": 100,
+    "opening_family": 225
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
