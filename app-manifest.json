@@ -13,8 +13,13 @@
     "exportAllInputManagedFolders": false,
     "exportKnowledgeBank": false,
     "exportPromptStudioHistories": false,
-    "exportInsightsData": false,
-    "includedDatasetsData": [],
+    "exportInsightsData": true,
+    "includedDatasetsData": [
+      {
+        "name": "openings_dedup",
+        "type": "S3"
+      }
+    ],
     "includedSavedModels": [],
     "includedManagedFolders": [],
     "includedModelEvaluationStores": [],
@@ -25,7 +30,7 @@
     "exportGitRepository": false
   },
   "instanceFeatures": {
-    "showFlowNavLink": false,
+    "showFlowNavLink": true,
     "showGenAiNavLink": false,
     "showLabNavLink": false,
     "showCodeNavLink": false,
@@ -33,7 +38,25 @@
     "showVersionControlFeatures": false
   },
   "useAppHomepage": true,
-  "homepageSections": [],
+  "homepageSections": [
+    {
+      "sectionTitle": "Opening performance analyzer",
+      "sectionText": "Generates opening performance metrics and charts for a given player based on their games, in order to help them identify their strengths and weaknesses.",
+      "tiles": [
+        {
+          "datasetName": "games",
+          "behavior": "GO_TO_DATASET",
+          "type": "UPLOAD_DATASET_SET_FILE",
+          "prompt": "Upload games"
+        },
+        {
+          "scenarioId": "BUILDGAMEANALYSIS",
+          "type": "SCENARIO_RUN",
+          "prompt": "Start analysis"
+        }
+      ]
+    }
+  ],
   "label": "chess-openings",
   "shortDesc": "The template *chess-openings* was created by david.courtinot on Dec 11th 2025",
   "tags": [],
