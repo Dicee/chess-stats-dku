@@ -19,6 +19,46 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "chess_canvas_openings",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ",
+          "DISCOVER"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "kaggle_openings",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ",
+          "DISCOVER"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "chess_com_openings",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ",
+          "DISCOVER"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "openings_dedup",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ",
+          "DISCOVER"
+        ]
       }
     ]
   },
