@@ -461,10 +461,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 0,
+              "top": 9,
               "left": 0,
-              "width": 23,
-              "height": 10
+              "width": 22,
+              "height": 9
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -492,7 +492,7 @@
               "fontColor": "#000000",
               "fontSize": 13
             },
-            "insightId": "O56GUkZ",
+            "insightId": "YSYOtIE",
             "insightType": "chart",
             "displayMode": "INSIGHT",
             "useDashboardSpacing": true,
@@ -503,10 +503,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 10,
+              "top": 0,
               "left": 0,
-              "width": 23,
-              "height": 11
+              "width": 22,
+              "height": 9
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -534,7 +534,7 @@
               "fontColor": "#000000",
               "fontSize": 13
             },
-            "insightId": "UsQgGJb",
+            "insightId": "jIckib0",
             "insightType": "chart",
             "displayMode": "INSIGHT",
             "useDashboardSpacing": true,
