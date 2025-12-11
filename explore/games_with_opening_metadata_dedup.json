@@ -2798,8 +2798,8 @@
         "id": "bfef8fc3",
         "type": "stacked_bars",
         "variant": "normal",
-        "name": "Count by opening_name and result",
-        "userEditedName": false,
+        "name": "Opening outcomes as black for Caro-Kann defense (with games count)",
+        "userEditedName": true,
         "displayWithEChartsByDefault": true,
         "genericDimension0": [
           {
