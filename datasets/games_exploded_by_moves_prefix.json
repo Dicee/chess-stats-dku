@@ -92,8 +92,21 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {"name":"link","type":"string"},
+      {"name":"date","type":"string"},
+      {"name":"color","type":"string"},
+      {"name":"elo","type":"bigint"},
+      {"name":"time_control","type":"string"},
+      {"name":"termination","type":"string"},
+      {"name":"result","type":"string"},
+      {"name":"opening_family","type":"string"},
+      {"name":"eco","type":"string"},
+      {"name":"game_moves","type":"string"},
+      {"name":"game_moves_prefix","type":"string"},
+      {"name":"game_moves_prefix_length","type":"bigint"}
+    ],
+    "userModified": false
   },
   "typeSystemVersion": "V2",
   "dkuProperties": [],
