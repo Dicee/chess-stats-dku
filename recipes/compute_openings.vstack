@@ -1,6 +1,13 @@
 {
   "mode": "UNION",
   "originColumnName": "original_dataset",
+  "selectedColumns": [
+    "eco",
+    "opening_name",
+    "opening_moves",
+    "source",
+    "trustworthiness"
+  ],
   "engineParams": {
     "hive": {
       "skipPrerunValidate": false,
@@ -65,6 +72,33 @@
     }
   ],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "eco",
+            "type": "string"
+          },
+          {
+            "name": "opening_name",
+            "type": "string"
+          },
+          {
+            "name": "opening_moves",
+            "type": "string"
+          },
+          {
+            "name": "source",
+            "type": "string"
+          },
+          {
+            "name": "trustworthiness",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
