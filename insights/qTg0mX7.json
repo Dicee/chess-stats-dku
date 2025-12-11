@@ -114,35 +114,41 @@
             {
               "type": "NATURAL",
               "label": "Natural ordering",
-              "sortAscending": true
+              "sortAscending": true,
+              "$$hashKey": "object:9037"
             },
             {
               "type": "AGGREGATION",
               "measureIdx": 0,
-              "label": "Count of records, descending"
+              "label": "Count of records, descending",
+              "$$hashKey": "object:9038"
             },
             {
               "type": "AGGREGATION",
               "measureIdx": 0,
               "sortAscending": true,
-              "label": "Count of records, ascending"
+              "label": "Count of records, ascending",
+              "$$hashKey": "object:9039"
             },
             {
               "type": "AGGREGATION",
               "measureIdx": 1,
-              "label": "Count of records, descending"
+              "label": "Count of records, descending",
+              "$$hashKey": "object:9040"
             },
             {
               "type": "AGGREGATION",
               "measureIdx": 1,
               "sortAscending": true,
-              "label": "Count of records, ascending"
+              "label": "Count of records, ascending",
+              "$$hashKey": "object:9041"
             }
           ],
           "sort": {
-            "type": "AGGREGATION",
-            "measureIdx": 0,
-            "label": "Count of records, descending"
+            "type": "NATURAL",
+            "label": "Natural ordering",
+            "sortAscending": true,
+            "$$hashKey": "object:9037"
           },
           "prefix": "",
           "suffix": "",
