@@ -94,7 +94,9 @@
   "schema": {
     "columns": [
       {"name":"opening_name","type":"string","meaning":"Text"},
-      {"name":"opening_moves","type":"string","meaning":"Text"}
+      {"name":"opening_moves","type":"string","meaning":"Text"},
+      {"name":"source","type":"string"},
+      {"name":"trustworthiness","type":"bigint"}
     ],
     "userModified": true
   },
