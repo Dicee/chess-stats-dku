@@ -133,8 +133,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 21,
+              "left": 17,
               "width": 8,
               "height": 8
             },
@@ -175,8 +175,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 21,
+              "left": 25,
               "width": 8,
               "height": 8
             },
