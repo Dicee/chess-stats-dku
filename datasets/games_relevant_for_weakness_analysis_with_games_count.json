@@ -105,7 +105,8 @@
       {"name":"game_moves","type":"string"},
       {"name":"opening_moves","type":"string"},
       {"name":"opening_name","type":"string"},
-      {"name":"opening_source","type":"string"}
+      {"name":"opening_source","type":"string"},
+      {"name":"total_games_count","type":"bigint"}
     ],
     "userModified": true
   },
