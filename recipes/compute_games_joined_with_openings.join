@@ -4,7 +4,7 @@
       "table2": 1,
       "table1": 0,
       "conditionsMode": "AND",
-      "type": "LEFT",
+      "type": "INNER",
       "outerJoinOnTheLeft": true,
       "on": [
         {
@@ -30,7 +30,7 @@
     },
     {
       "name": "date",
-      "type": "string",
+      "type": "dateonly",
       "table": 0
     },
     {
@@ -100,11 +100,6 @@
     },
     {
       "name": "trustworthiness",
-      "type": "bigint",
-      "table": 1
-    },
-    {
-      "name": "count",
       "type": "bigint",
       "table": 1
     }
@@ -180,7 +175,7 @@
           },
           {
             "name": "date",
-            "type": "string"
+            "type": "dateonly"
           },
           {
             "name": "color",
@@ -236,10 +231,6 @@
           },
           {
             "name": "trustworthiness",
-            "type": "bigint"
-          },
-          {
-            "name": "count",
             "type": "bigint"
           }
         ],
