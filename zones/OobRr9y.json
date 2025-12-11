@@ -53,6 +53,10 @@
     {
       "objectId": "compute_openings_dedup",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "games",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
