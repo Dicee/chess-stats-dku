@@ -5,77 +5,105 @@
   },
   "keys": [
     {
-      "column": "opening_moves"
+      "last": false,
+      "max": false,
+      "column": "opening_moves",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "median": false,
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
     {
-      "last": false,
+      "last": true,
       "max": false,
-      "firstLastNotNull": false,
+      "firstLastNotNull": true,
       "column": "eco",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "trustworthiness"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "opening_name",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "trustworthiness"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "source",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "trustworthiness"
     },
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "trustworthiness",
       "count": false,
+      "$idx": 3,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "trustworthiness"
     }
   ],
   "globalCount": true,
@@ -117,8 +145,40 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "opening_moves",
+            "type": "string"
+          },
+          {
+            "name": "eco_last",
+            "type": "string"
+          },
+          {
+            "name": "opening_name_last",
+            "type": "string"
+          },
+          {
+            "name": "source_last",
+            "type": "string"
+          },
+          {
+            "name": "trustworthiness_last",
+            "type": "bigint"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
