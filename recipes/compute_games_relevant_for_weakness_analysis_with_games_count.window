@@ -5,6 +5,7 @@
   },
   "ntileValues": "10",
   "retrievedColumnsSelectionMode": "ALL",
+  "keys": [],
   "values": [
     {
       "last": false,
@@ -12,10 +13,12 @@
       "max": false,
       "firstLastNotNull": false,
       "column": "link",
-      "count": false,
+      "count": true,
+      "$idx": 0,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -24,6 +27,7 @@
       "avg": false,
       "lag": false,
       "leadValues": "1",
+      "$selected": true,
       "stddev": false,
       "value": true,
       "leadDiff": false,
@@ -36,9 +40,11 @@
       "firstLastNotNull": false,
       "column": "date",
       "count": false,
+      "$idx": 1,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "dateonly",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -59,9 +65,11 @@
       "firstLastNotNull": false,
       "column": "color",
       "count": false,
+      "$idx": 2,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -82,9 +90,11 @@
       "firstLastNotNull": false,
       "column": "elo",
       "count": false,
+      "$idx": 3,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -105,9 +115,11 @@
       "firstLastNotNull": false,
       "column": "time_control",
       "count": false,
+      "$idx": 4,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -128,9 +140,11 @@
       "firstLastNotNull": false,
       "column": "termination",
       "count": false,
+      "$idx": 5,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -151,9 +165,11 @@
       "firstLastNotNull": false,
       "column": "result",
       "count": false,
+      "$idx": 6,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -174,9 +190,11 @@
       "firstLastNotNull": false,
       "column": "opening_family",
       "count": false,
+      "$idx": 7,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -197,9 +215,11 @@
       "firstLastNotNull": false,
       "column": "eco",
       "count": false,
+      "$idx": 8,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -220,9 +240,11 @@
       "firstLastNotNull": false,
       "column": "game_moves",
       "count": false,
+      "$idx": 9,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -243,9 +265,11 @@
       "firstLastNotNull": false,
       "column": "opening_moves",
       "count": false,
+      "$idx": 10,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -266,9 +290,11 @@
       "firstLastNotNull": false,
       "column": "opening_name",
       "count": false,
+      "$idx": 11,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -289,9 +315,11 @@
       "firstLastNotNull": false,
       "column": "opening_source",
       "count": false,
+      "$idx": 12,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -309,20 +337,89 @@
   "legacyUnboundedWindowStreamBehavior": false,
   "windows": [
     {
-      "windowUpperBound": 0.0,
+      "windowLimitMode": "ROWS",
+      "windowUpperBound": 0,
       "enablePartitioning": false,
-      "enableOrdering": false,
+      "enableOrdering": true,
       "precedingRows": 0,
       "limitFollowing": false,
-      "orders": [],
+      "orders": [
+        {
+          "column": "link",
+          "desc": false
+        }
+      ],
       "limitPreceding": false,
       "followingRows": 0,
-      "windowLowerBound": 0.0,
-      "enableLimits": false
+      "windowLowerBound": 0,
+      "enableLimits": true
     }
   ],
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "link",
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "type": "dateonly"
+          },
+          {
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "name": "elo",
+            "type": "bigint"
+          },
+          {
+            "name": "time_control",
+            "type": "string"
+          },
+          {
+            "name": "termination",
+            "type": "string"
+          },
+          {
+            "name": "result",
+            "type": "string"
+          },
+          {
+            "name": "opening_family",
+            "type": "string"
+          },
+          {
+            "name": "eco",
+            "type": "string"
+          },
+          {
+            "name": "game_moves",
+            "type": "string"
+          },
+          {
+            "name": "opening_moves",
+            "type": "string"
+          },
+          {
+            "name": "opening_name",
+            "type": "string"
+          },
+          {
+            "name": "opening_source",
+            "type": "string"
+          },
+          {
+            "name": "link_count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
@@ -367,5 +464,8 @@
   "ntile": false,
   "rank": false,
   "denseRank": false,
-  "rowNumber": false
+  "rowNumber": false,
+  "outputColumnNameOverrides": {
+    "link_count": "total_games_count"
+  }
 }
