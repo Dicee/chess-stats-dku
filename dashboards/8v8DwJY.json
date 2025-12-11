@@ -637,6 +637,25 @@
           "_refreshTrigger": 1765457986801
         }
       }
+    },
+    {
+      "id": "uogPWn3",
+      "grid": {
+        "tiles": []
+      },
+      "title": "Deep-dive: top opening weaknesses",
+      "show": true,
+      "showTitle": false,
+      "titleAlign": "CENTER",
+      "titleFontColor": "#444444",
+      "titleFontSize": 28,
+      "enableCrossFilters": true,
+      "backgroundColor": "#FFFFFF",
+      "showFilterPanel": true,
+      "filtersParams": {
+        "panelPosition": "TOP",
+        "engineType": "LINO"
+      }
     }
   ],
   "owner": "david.courtinot@dataiku.com",
