@@ -94,6 +94,10 @@
   "schema": {
     "columns": [
       {"name":"opening_moves","type":"string"},
+      {"name":"eco_last","type":"string"},
+      {"name":"opening_name_last","type":"string"},
+      {"name":"source_last","type":"string"},
+      {"name":"trustworthiness_last","type":"bigint"},
       {"name":"count","type":"bigint"}
     ],
     "userModified": true
