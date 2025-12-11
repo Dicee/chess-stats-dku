@@ -58,16 +58,6 @@
           "dashboardId": "8v8DwJY",
           "type": "DASHBOARD_LINK",
           "prompt": "Review opening performance"
-        },
-        {
-          "dashboardId": "8v8DwJY",
-          "format": {
-            "paperSize": "A4",
-            "orientation": "LANDSCAPE",
-            "fileType": "PDF"
-          },
-          "type": "DOWNLOAD_DASHBOARD_EXPORT",
-          "prompt": "Export opening performance report to PDF"
         }
       ]
     }
