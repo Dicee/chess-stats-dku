@@ -9,6 +9,14 @@
     {
       "objectId": "compute_games_joined_with_openings",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_games_with_opening_metadata_dedup",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "games_with_opening_metadata_dedup",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
