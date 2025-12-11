@@ -21,14 +21,6 @@
     {
       "objectId": "compute_games_exploded_by_moves_prefix",
       "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_games_with_unknown_opening",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "games_with_unknown_opening",
-      "objectType": "DATASET"
     }
   ],
   "shared": [],

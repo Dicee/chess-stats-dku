@@ -17,6 +17,14 @@
     {
       "objectId": "games_with_opening_metadata_dedup",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "games_with_unknown_opening",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_games_with_unknown_opening",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
