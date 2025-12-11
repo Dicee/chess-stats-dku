@@ -106,7 +106,7 @@
       "orderColumn": "trustworthiness"
     }
   ],
-  "globalCount": true,
+  "globalCount": false,
   "engineParams": {
     "hive": {
       "skipPrerunValidate": false,
@@ -174,10 +174,6 @@
           },
           {
             "name": "trustworthiness_last",
-            "type": "bigint"
-          },
-          {
-            "name": "count",
             "type": "bigint"
           }
         ],
