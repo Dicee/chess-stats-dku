@@ -1,6 +1,28 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "eco"
+      },
+      {
+        "d": true,
+        "name": "opening_name"
+      },
+      {
+        "d": true,
+        "name": "opening_moves"
+      },
+      {
+        "d": true,
+        "name": "source"
+      },
+      {
+        "d": true,
+        "name": "trustworthiness"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +52,208 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "name": "Drop unused columns",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [],
+            "keep": false,
+            "appliesTo": "PATTERN",
+            "appliesToPattern": "move.*"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "White_win%"
+            ],
+            "keep": false,
+            "appliesTo": "PATTERN",
+            "appliesToPattern": "White_.*"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "White_win%"
+            ],
+            "keep": false,
+            "appliesTo": "PATTERN",
+            "appliesToPattern": "Black_.*"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "Opponent Win %",
+              "Draw %",
+              "Player Win %",
+              "Colour",
+              "Avg Player",
+              "Num Games",
+              "Last Played",
+              "Perf Rating"
+            ],
+            "keep": false,
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "col_0"
+            ],
+            "keep": false,
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "Normalization",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "ECO",
+                "to": "eco"
+              },
+              {
+                "from": "Moves",
+                "to": "opening_moves"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "Opening",
+                "to": "opening_name"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "columns": [
+              "eco"
+            ],
+            "reorderAction": "AT_START",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "\"Kaggle\"",
+            "column": "source",
+            "errorColumn": ""
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "useDatasetForMapping": false,
+            "mapping": [
+              {
+                "from": "1.00E+03",
+                "to": "1.e3"
+              },
+              {
+                "from": "1.00E+04",
+                "to": "1.e4"
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "opening_moves"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "SUBSTRING"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "2",
+        "column": "trustworthiness",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -63,7 +285,39 @@
       "meaning": "Text"
     }
   },
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "Opponent Win %": 134,
+    "White_win%": 134,
+    "White_Wins": 141,
+    "move2w": 100,
+    "moves_list": 300,
+    "move4w": 100,
+    "source": 100,
+    "opening_moves": 300,
+    "Colour": 100,
+    "Perf Rating": 100,
+    "eco": 100,
+    "trustworthiness": 128,
+    "move2b": 100,
+    "Moves": 300,
+    "Draw %": 134,
+    "Opening": 300,
+    "col_0": 100,
+    "Black_win%": 134,
+    "Avg Player": 100,
+    "Num Games": 100,
+    "White_odds": 148,
+    "opening_name": 300,
+    "move1w": 100,
+    "move3w": 100,
+    "move4b": 100,
+    "ECO": 100,
+    "move1b": 100,
+    "move3b": 100,
+    "Black_Wins": 141,
+    "Last Played": 127,
+    "Player Win %": 134
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
