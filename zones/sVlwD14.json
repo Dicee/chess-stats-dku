@@ -21,14 +21,6 @@
     {
       "objectId": "compute_games_exploded_by_moves_prefix",
       "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_games_joined_with_openings",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "games_joined_with_openings",
-      "objectType": "DATASET"
     }
   ],
   "shared": [],

@@ -1,7 +1,16 @@
 {
   "name": "analysis",
   "color": "#F9BE40",
-  "items": [],
+  "items": [
+    {
+      "objectId": "games_joined_with_openings",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_games_joined_with_openings",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],
