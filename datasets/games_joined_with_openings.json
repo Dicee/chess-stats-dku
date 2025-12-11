@@ -108,8 +108,7 @@
       {"name":"opening_moves","type":"string"},
       {"name":"opening_name","type":"string"},
       {"name":"source","type":"string"},
-      {"name":"trustworthiness","type":"bigint"},
-      {"name":"count","type":"bigint"}
+      {"name":"trustworthiness","type":"bigint"}
     ],
     "userModified": true
   },
