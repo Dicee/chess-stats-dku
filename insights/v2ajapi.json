@@ -29,7 +29,7 @@
       "id": "bfef8fc3",
       "type": "stacked_bars",
       "variant": "normal",
-      "name": "Opening outcomes as black for Caro-Kann defense (with games count)",
+      "name": "Opening outcomes as white for Ruy Lopez (with games count)",
       "userEditedName": true,
       "displayWithEChartsByDefault": true,
       "genericDimension0": [
@@ -510,8 +510,8 @@
           "fixedValues": false
         },
         "customColors": {
-          "v_0-1": "#2CA02C",
-          "v_1-0": "#FF0E0E",
+          "v_1-0": "#2CA02C",
+          "v_0-1": "#FF0E0E",
           "v_1/2-1/2": "#DFE0E8"
         }
       },
