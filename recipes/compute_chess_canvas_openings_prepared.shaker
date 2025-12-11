@@ -1,6 +1,28 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "eco"
+      },
+      {
+        "d": true,
+        "name": "opening_name"
+      },
+      {
+        "d": true,
+        "name": "opening_moves"
+      },
+      {
+        "d": true,
+        "name": "source"
+      },
+      {
+        "d": true,
+        "name": "trustworthiness"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +52,68 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "name": "Normalization",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "ECO",
+                "to": "eco"
+              },
+              {
+                "from": "name",
+                "to": "opening_name"
+              },
+              {
+                "from": "moves",
+                "to": "opening_moves"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "\"Github chess-canvas\"",
+            "column": "source",
+            "errorColumn": ""
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": true,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "1",
+            "column": "trustworthiness",
+            "errorColumn": ""
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -71,7 +153,16 @@
       "meaning": "Text"
     }
   },
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "ECO": 100,
+    "eco": 100,
+    "trustworthiness": 128,
+    "opening_name": 300,
+    "moves": 300,
+    "name": 300,
+    "source": 148,
+    "opening_moves": 300
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
