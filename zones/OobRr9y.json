@@ -1,7 +1,60 @@
 {
   "name": "openings",
   "color": "#C54F00",
-  "items": [],
+  "items": [
+    {
+      "objectId": "chess_canvas_openings_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "kaggle_openings_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "chess_com_openings_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "chess_com_openings",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "kaggle_openings",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "chess_canvas_openings",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "openings",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "openings_dedup",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_chess_canvas_openings_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_kaggle_openings_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_chess_com_openings_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_openings",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_openings_dedup",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],
