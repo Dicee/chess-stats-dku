@@ -93,9 +93,11 @@
   },
   "schema": {
     "columns": [
-      {"name":"ECO","type":"string","meaning":"Text"},
-      {"name":"name","type":"string","meaning":"Text"},
-      {"name":"moves","type":"string","meaning":"Text"}
+      {"name":"eco","type":"string"},
+      {"name":"opening_name","type":"string"},
+      {"name":"opening_moves","type":"string"},
+      {"name":"source","type":"string"},
+      {"name":"trustworthiness","type":"bigint"}
     ],
     "userModified": true
   },
