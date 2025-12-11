@@ -41,6 +41,14 @@
     {
       "objectId": "games_relevant_for_weakness_analysis_with_games_count",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_games_outcomes_by_opening_name",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "games_outcomes_by_opening_name",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
