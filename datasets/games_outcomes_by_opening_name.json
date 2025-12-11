@@ -93,8 +93,15 @@
   },
   "schema": {
     "columns": [
+      {"name":"opening_family","type":"string"},
       {"name":"opening_name","type":"string"},
-      {"name":"count","type":"bigint"}
+      {"name":"color","type":"string"},
+      {"name":"opening_moves","type":"string"},
+      {"name":"total_games_count","type":"bigint"},
+      {"name":"wins","type":"bigint"},
+      {"name":"draws","type":"bigint"},
+      {"name":"losses","type":"double"},
+      {"name":"opening_games_count","type":"bigint"}
     ],
     "userModified": true
   },
