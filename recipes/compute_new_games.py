@@ -580,7 +580,7 @@ def upload_directory_contents(local_dir, remote_folder, remote_base_path=""):
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 games_file = cli(['-s', '2024-01', '-e', '2025-11', '--lichess-username', 'DiciDicee', '--chess-com-username', 'DiciDicee'])
 
-upload_directory_contents(Path("pgn"), managed_folder)
+upload_directory_contents(Path("pgn-cache"), managed_folder, "pgn-cache")
 
 logger.info(f"Uploading games file {games_file} to managed folder...", "pgn-cache")
 with open(games_file, 'rb') as f:
