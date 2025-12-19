@@ -29,6 +29,10 @@
     {
       "objectId": "new_games",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_new_games",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
