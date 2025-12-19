@@ -22,7 +22,7 @@
         "watches": [
           {
             "type": "DATASET",
-            "itemId": "games",
+            "itemId": "manually_uploaded_games",
             "partitionsSpec": ""
           }
         ],

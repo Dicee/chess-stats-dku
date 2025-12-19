@@ -3,10 +3,6 @@
   "color": "#31439C",
   "items": [
     {
-      "objectId": "games",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "games_prepared",
       "objectType": "DATASET"
     },
@@ -33,6 +29,10 @@
     {
       "objectId": "compute_new_games",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "manually_uploaded_games",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
