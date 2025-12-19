@@ -23,15 +23,15 @@
       "objectType": "MANAGED_FOLDER"
     },
     {
-      "objectId": "new_games",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "compute_new_games",
       "objectType": "RECIPE"
     },
     {
       "objectId": "manually_uploaded_games",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "game",
       "objectType": "DATASET"
     }
   ],
