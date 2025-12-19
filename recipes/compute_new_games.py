@@ -14,6 +14,15 @@ import sys
 import os
 import json
 import requests
+import logging
+
+logger = logging.getLogger("recipe_logger")
+logger.setLevel(logging.INFO)
+
+if not logger.handlers:
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+    logger.addHandler(handler)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 managed_folder = dataiku.Folder("b2MJgQKd")
@@ -24,9 +33,9 @@ def cached_pgn_exists(path):
         return details['exists']
     except Exception:
         return False
-    
+
 def download_locally_with_same_path(path):
-    print(f"Downloading {path} from cache")
+    logger.info(f"Downloading {path} from cache")
     with managed_folder.get_download_stream(Path('/') / path) as stream:
         with open(path, "wb") as f:
             f.write(stream.read())
@@ -57,7 +66,7 @@ def fetch_chess_com_games(username, start_date, end_date, platform_base_dir):
 
     user_games_dir = platform_base_dir / username
     user_games_dir.mkdir(parents=True, exist_ok=True)
-    print(f"  - Created user directory: {user_games_dir}")
+    logger.info(f"  - Created user directory: {user_games_dir}")
 
     months = list(get_month_range(start_date, end_date))
 
@@ -68,7 +77,7 @@ def fetch_chess_com_games(username, start_date, end_date, platform_base_dir):
             download_locally_with_same_path(pgn_path)
             continue
 
-        print(f"{pgn_path} is missing from cache, fetching it...")
+        logger.info(f"{pgn_path} is missing from cache, fetching it...")
         url = f"https://api.chess.com/pub/player/{username}/games/{year}/{month:02d}"
         try:
             response = requests.get(url, headers={"User-Agent": "chess-stats-retriever/1.0"})
@@ -78,18 +87,18 @@ def fetch_chess_com_games(username, start_date, end_date, platform_base_dir):
                 f.write(response.text)
 
         except requests.exceptions.RequestException as e:
-            print(f"Warning: Could not retrieve games for {year}-{month:02d}. Error: {e}", file=sys.stderr)
+            logger.info(f"Warning: Could not retrieve games for {year}-{month:02d}. Error: {e}", file=sys.stderr)
 
 
 def fetch_lichess_games(username, start_date, end_date, platform_base_dir):
     """
     Fetches games for a lichess.org user and saves them to a PGN file.
     """
-    print(f"\nProcessing lichess.org games for user: {username}")
+    logger.info(f"\nProcessing lichess.org games for user: {username}")
 
     user_games_dir = platform_base_dir / username
     user_games_dir.mkdir(parents=True, exist_ok=True)
-    print(f"  - Created user directory: {user_games_dir}")
+    logger.info(f"  - Created user directory: {user_games_dir}")
 
     months = list(get_month_range(start_date.date(), end_date.date()))
 
@@ -99,8 +108,8 @@ def fetch_lichess_games(username, start_date, end_date, platform_base_dir):
         if cached_pgn_exists(pgn_path):
             download_locally_with_same_path(pgn_path)
             continue
-            
-        print(f"{pgn_path} is missing from cache, fetching it...")            
+
+        logger.info(f"{pgn_path} is missing from cache, fetching it...")
 
         # Lichess API uses timestamps in milliseconds
         start_of_month = datetime.datetime(year, month, 1)
@@ -131,7 +140,7 @@ def fetch_lichess_games(username, start_date, end_date, platform_base_dir):
                         f.write(chunk)
 
         except requests.exceptions.RequestException as e:
-            print(f"Warning: Could not retrieve games for {year}-{month:02d}. Error: {e}", file=sys.stderr)
+            logger.info(f"Warning: Could not retrieve games for {year}-{month:02d}. Error: {e}", file=sys.stderr)
 
 
 def validate_date(date_string):
@@ -155,7 +164,7 @@ def parse_chess_com_games(username, output_file, chess_com_base_dir):
     """
     Parses chess.com games and appends them to a TSV file.
     """
-    print(f"\nParsing chess.com games for user: {username}")
+    logger.info(f"\nParsing chess.com games for user: {username}")
     user_games_dir = chess_com_base_dir / username
 
     pgn_files = os.listdir(user_games_dir)
@@ -203,13 +212,13 @@ def parse_chess_com_games(username, output_file, chess_com_base_dir):
                     game["eco"],
                     game["moves"],
                 ])
-    print(f"  - Wrote {rows} rows for chess.com games to {output_file}")
+    logger.info(f"  - Wrote {rows} rows for chess.com games to {output_file}")
 
 def parse_lichess_games(username, output_file, lichess_base_dir):
     """
     Parses lichess games and appends them to a TSV file.
     """
-    print(f"\nParsing lichess.org games for user: {username}")
+    logger.info(f"\nParsing lichess.org games for user: {username}")
     user_games_dir = lichess_base_dir / username
 
     pgn_files = os.listdir(user_games_dir)
@@ -254,7 +263,7 @@ def parse_lichess_games(username, output_file, lichess_base_dir):
                     game["eco"],
                     game["moves"],
                 ])
-    print(f"  - Wrote {rows} rows for lichess games to {output_file}")
+    logger.info(f"  - Wrote {rows} rows for lichess games to {output_file}")
 
 def parse_pgn(username, pgn_raw):
     lines = pgn_raw.strip().split("\n")
@@ -553,10 +562,10 @@ def upload_directory_contents(local_dir, remote_folder, remote_base_path=""):
     """
     local_path = Path(local_dir)
     if not local_path.is_dir():
-        print(f"Warning: {local_dir} is not a directory. Skipping directory upload.")
+        logger.info(f"Warning: {local_dir} is not a directory. Skipping directory upload.")
         return
 
-    print(f"Starting recursive upload from {local_dir}...")
+    logger.info(f"Starting recursive upload from {local_dir}...")
     for root, dirs, files in os.walk(local_path):
         for file in files:
             file_path = Path(root) / file
@@ -564,7 +573,7 @@ def upload_directory_contents(local_dir, remote_folder, remote_base_path=""):
             # Convert to string and ensure forward slashes for remote path (managed folders use /)
             remote_path = (Path(remote_base_path) / rel_path).as_posix()
 
-            print(f"Uploading {file} -> {remote_path}")
+            logger.info(f"Uploading {file} -> {remote_path}")
             with open(file_path, "rb") as f:
                 remote_folder.upload_stream(remote_path, f)
 
@@ -573,7 +582,7 @@ games_file = cli(['-s', '2024-01', '-e', '2025-11', '--lichess-username', 'DiciD
 
 upload_directory_contents(Path("pgn"), managed_folder)
 
-print(f"Uploading games file {games_file} to managed folder...", "pgn-cache")
+logger.info(f"Uploading games file {games_file} to managed folder...", "pgn-cache")
 with open(games_file, 'rb') as f:
     managed_folder.upload_stream(games_file, f)
 
