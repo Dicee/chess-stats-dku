@@ -25,6 +25,10 @@
     {
       "objectId": "b2MJgQKd",
       "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "new_games",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
