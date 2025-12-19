@@ -21,6 +21,10 @@
     {
       "objectId": "compute_games_exploded_by_moves_prefix",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "b2MJgQKd",
+      "objectType": "MANAGED_FOLDER"
     }
   ],
   "shared": [],
