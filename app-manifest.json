@@ -44,10 +44,37 @@
       "sectionText": "Generates opening performance metrics and charts for a given player based on their games, in order to help them identify their strengths and weaknesses.",
       "tiles": [
         {
-          "datasetName": "manually_uploaded_games",
-          "behavior": "GO_TO_DATASET",
-          "type": "UPLOAD_DATASET_SET_FILE",
-          "prompt": "Upload games"
+          "behavior": "MODAL",
+          "params": [
+            {
+              "name": "startDate",
+              "type": "STRING",
+              "label": "Start date (yyyy-MM)",
+              "description": "First month to fetch game data for",
+              "allowDuplicates": true
+            },
+            {
+              "name": "endDate",
+              "type": "STRING",
+              "label": "End date (yyyy-MM)",
+              "description": "Last month to fetch game data for",
+              "allowDuplicates": true
+            },
+            {
+              "name": "chessComUsername",
+              "type": "STRING",
+              "label": "chess.com username",
+              "allowDuplicates": true
+            },
+            {
+              "name": "lichessUsername",
+              "type": "STRING",
+              "label": "lichess.org username",
+              "allowDuplicates": true
+            }
+          ],
+          "type": "PROJECT_VARIABLES_EDIT",
+          "prompt": "Configuration"
         },
         {
           "scenarioId": "BUILDGAMEANALYSIS",
