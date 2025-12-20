@@ -51,26 +51,28 @@
               "type": "STRING",
               "label": "Start date (yyyy-MM)",
               "description": "First month to fetch game data for",
-              "allowDuplicates": true
+              "allowDuplicates": false
             },
             {
               "name": "endDate",
               "type": "STRING",
               "label": "End date (yyyy-MM)",
               "description": "Last month to fetch game data for",
-              "allowDuplicates": true
+              "allowDuplicates": false
             },
             {
               "name": "chessComUsername",
               "type": "STRING",
               "label": "chess.com username",
-              "allowDuplicates": true
+              "description": "Leave blank to ignore (but at least one username must be provided)",
+              "allowDuplicates": false
             },
             {
               "name": "lichessUsername",
               "type": "STRING",
               "label": "lichess.org username",
-              "allowDuplicates": true
+              "description": "Leave blank to ignore (but at least one username must be provided)",
+              "allowDuplicates": false
             }
           ],
           "type": "PROJECT_VARIABLES_EDIT",
