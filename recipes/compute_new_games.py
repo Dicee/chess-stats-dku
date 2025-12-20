@@ -584,11 +584,14 @@ def upload_directory_contents(local_dir, remote_folder, remote_base_path=""):
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 args = ['-s', variables['startDate'], '-e', variables['endDate']]
 
-if 'lichessUsername' in variables:
-    args.extend(['--lichess-username', variables['lichessUsername']])
-    
-if 'chessComUsername' in variables:
-    args.extend(['--chess-com-username', variables['chessComUsername']])    
+chess_com_username = variables.get('chessComUsername', '');
+lichess_username = variables.get('lichessUsername', '');
+
+if len(chess_com_username) > 0:
+    args.extend(['--chess-com-username', chess_com_username])    
+
+if len(lichess_username) > 0:
+    args.extend(['--lichess-username', lichess_username]
 
 games_file = cli(args)
 upload_directory_contents(Path("pgn-cache"), managed_folder, "pgn-cache")
