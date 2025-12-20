@@ -25,6 +25,10 @@ if not logger.handlers:
     logger.addHandler(handler)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+project = dataiku.Project()
+variables = project.get_variables()['standard']
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 managed_folder = dataiku.Folder("b2MJgQKd")
 
 def cached_pgn_exists(path):
@@ -578,8 +582,15 @@ def upload_directory_contents(local_dir, remote_folder, remote_base_path=""):
                 remote_folder.upload_stream(remote_path, f)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-games_file = cli(['-s', '2024-01', '-e', '2025-11', '--lichess-username', 'DiciDicee', '--chess-com-username', 'DiciDicee'])
+args = ['-s', variables['startDate'], '-e', variables['endDate']]
 
+if 'lichessUsername' in variables:
+    args.extend(['--lichess-username', variables['lichessUsername']])
+    
+if 'chessComUsername' in variables:
+    args.extend(['--chess-com-username', variables['chessComUsername']])    
+
+games_file = cli(args)
 upload_directory_contents(Path("pgn-cache"), managed_folder, "pgn-cache")
 
 logger.info(f"Uploading games file {games_file} to managed folder...", "pgn-cache")
