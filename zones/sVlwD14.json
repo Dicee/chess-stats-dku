@@ -27,10 +27,6 @@
       "objectType": "RECIPE"
     },
     {
-      "objectId": "manually_uploaded_games",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "game",
       "objectType": "DATASET"
     }
