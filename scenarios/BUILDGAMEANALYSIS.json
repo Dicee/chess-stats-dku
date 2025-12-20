@@ -56,7 +56,7 @@
           "builds": [
             {
               "type": "DATASET",
-              "itemId": "game",
+              "itemId": "games",
               "partitionsSpec": ""
             }
           ],

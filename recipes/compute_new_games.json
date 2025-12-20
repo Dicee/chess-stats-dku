@@ -32,7 +32,7 @@
     "main": {
       "items": [
         {
-          "ref": "game",
+          "ref": "games",
           "appendMode": false
         }
       ]

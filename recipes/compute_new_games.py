@@ -601,5 +601,6 @@ with open(games_file, 'rb') as f:
 games_df = pd.read_csv(games_file, sep='\t')
 
 # Dataset new_games renamed to game by david.courtinot@dataiku.com on 2025-12-19 19:01:47
-DiciDicee_games = dataiku.Dataset("game")
+# Dataset game renamed to games by david.courtinot@dataiku.com on 2025-12-20 16:52:44
+DiciDicee_games = dataiku.Dataset("games")
 DiciDicee_games.write_with_schema(games_df)

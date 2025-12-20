@@ -53,7 +53,7 @@
     "main": {
       "items": [
         {
-          "ref": "game",
+          "ref": "games",
           "deps": []
         }
       ]
