@@ -7,7 +7,8 @@ from pathlib import Path
 import dataiku
 import io
 import argparse
-import datetime
+import datetime as dt
+import zoneinfo
 import csv
 import re
 import sys
@@ -116,12 +117,12 @@ def fetch_lichess_games(username, start_date, end_date, platform_base_dir):
         logger.info(f"{pgn_path} is missing from cache, fetching it...")
 
         # Lichess API uses timestamps in milliseconds
-        start_of_month = datetime.datetime(year, month, 1)
+        start_of_month = dt.datetime(year, month, 1)
 
         if month == 12:
-            end_of_month = datetime.datetime(year + 1, 1, 1) - datetime.timedelta(milliseconds=1)
+            end_of_month = dt.datetime(year + 1, 1, 1) - dt.timedelta(milliseconds=1)
         else:
-            end_of_month = datetime.datetime(year, month + 1, 1) - datetime.timedelta(milliseconds=1)
+            end_of_month = dt.datetime(year, month + 1, 1) - dt.timedelta(milliseconds=1)
 
         since = int(start_of_month.timestamp() * 1000)
         until = int(end_of_month.timestamp() * 1000)
@@ -156,7 +157,7 @@ def validate_date(date_string):
         return None
 
     try:
-        return datetime.datetime.strptime(date_string, '%Y-%m').date()
+        return dt.datetime.strptime(date_string, '%Y-%m').date()
     except ValueError:
         pass
 
@@ -514,7 +515,7 @@ def cli(args):
     if not args.chess_com_username and not args.lichess_username:
         parser.error("At least one of --chess-com-username or --lichess-username must be provided.")
 
-    end_date = args.end_date if args.end_date else datetime.date.today()
+    end_date = args.end_date if args.end_date else dt.date.today()
 
     if args.start_date and args.start_date > end_date:
         parser.error(f"Start date ({args.start_date}) cannot be after end date ({end_date}).")
@@ -542,8 +543,8 @@ def cli(args):
         parse_chess_com_games(args.chess_com_username, output_file, chess_com_base_dir)
 
     if args.lichess_username:
-        start_datetime = datetime.datetime.combine(args.start_date, datetime.time.min)
-        end_datetime = datetime.datetime.combine(end_date, datetime.time.max)
+        start_datetime = dt.datetime.combine(args.start_date, dt.time.min)
+        end_datetime = dt.datetime.combine(end_date, dt.time.max)
         fetch_lichess_games(args.lichess_username, start_datetime, end_datetime, lichess_base_dir)
         parse_lichess_games(args.lichess_username, output_file, lichess_base_dir)
 
@@ -582,13 +583,22 @@ def upload_directory_contents(local_dir, remote_folder, remote_base_path=""):
                 remote_folder.upload_stream(remote_path, f)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-args = ['-s', variables['startDate'], '-e', variables['endDate']]
+now = dt.datetime.now(tz=zoneinfo.ZoneInfo("UTC"))
+
+month = now.month - 1 if now.month > 1 else 12
+year = now.year if month != 12 else now.year - 1
+previous_month = dt.datetime(year, month, 1)
+
+endDate = previous_month.strftime('%Y-%m')
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+args = ['-s', variables['startDate'], '-e', endDate]
 
 chess_com_username = variables.get('chessComUsername', '');
 lichess_username = variables.get('lichessUsername', '');
 
 if len(chess_com_username) > 0:
-    args.extend(['--chess-com-username', chess_com_username])    
+    args.extend(['--chess-com-username', chess_com_username])
 
 if len(lichess_username) > 0:
     args.extend(['--lichess-username', lichess_username]
