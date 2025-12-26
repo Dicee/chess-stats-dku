@@ -13,24 +13,23 @@
   "tags": [],
   "triggers": [
     {
-      "id": "Xhk34hdT",
-      "type": "ds_modified",
-      "name": "Dataset modified",
-      "delay": 15,
+      "id": "IngnX39z",
+      "type": "temporal",
+      "name": "Time-based",
+      "delay": 5,
       "active": true,
       "params": {
-        "watches": [
-          {
-            "type": "DATASET",
-            "itemId": "manually_uploaded_games",
-            "partitionsSpec": ""
-          }
+        "repeatFrequency": 1,
+        "frequency": "Monthly",
+        "startingFrom": "2026-01-01",
+        "daysOfWeek": [
+          "Friday"
         ],
-        "triggerWhenAllFire": false
-      },
-      "graceDelaySettings": {
-        "delay": 5,
-        "checkAgainAfterGraceDelay": true
+        "monthlyRunOn": "ON_THE_DAY",
+        "minute": 0,
+        "hour": 3,
+        "timezone": "SERVER",
+        "lastUpdate": 1766784970314
       }
     }
   ],
