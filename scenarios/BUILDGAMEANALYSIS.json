@@ -67,6 +67,32 @@
           "handleWarningsAs": "WARNING",
           "proceedOnFailure": false
         }
+      },
+      {
+        "id": "set_project_vars",
+        "type": "set_project_vars",
+        "name": "Step #2",
+        "enabled": true,
+        "alwaysShowComment": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "variables": {},
+          "definitions": [
+            {
+              "key": "endDate",
+              "value": "concat(datePart(now(), \"year\", \"UTC\"), \"-\", datePart(now(), \"month\", \"UTC\"))"
+            }
+          ],
+          "evaluateValues": true
+        }
       }
     ]
   },
