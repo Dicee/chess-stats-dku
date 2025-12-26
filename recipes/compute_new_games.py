@@ -27,7 +27,7 @@ if not logger.handlers:
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 project = dataiku.Project()
-variables = project.get_variables()['standard']
+variables = project.get_variables()['local']
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 managed_folder = dataiku.Folder("b2MJgQKd")
