@@ -87,6 +87,8 @@
   "label": "chess-openings",
   "shortDesc": "The template *chess-openings* was created by david.courtinot on Dec 11th 2025",
   "tags": [],
+  "version": "2",
+  "versionNotes": "Automate game fetching from chess.com and lichess",
   "instantiationPermission": "USE_APP_MASTER_PERMISSIONS",
   "limitedVisibilityEnabled": "INHERIT",
   "accessRequestsEnabled": "INHERIT",
