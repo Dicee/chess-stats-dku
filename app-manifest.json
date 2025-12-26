@@ -54,13 +54,6 @@
               "allowDuplicates": false
             },
             {
-              "name": "endDate",
-              "type": "STRING",
-              "label": "End date (yyyy-MM)",
-              "description": "Last month to fetch game data for",
-              "allowDuplicates": false
-            },
-            {
               "name": "chessComUsername",
               "type": "STRING",
               "label": "chess.com username",
