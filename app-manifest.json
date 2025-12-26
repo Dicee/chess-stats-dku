@@ -1,6 +1,6 @@
 {
   "projectExportManifest": {
-    "exportUploads": false,
+    "exportUploads": true,
     "exportAllInputDatasets": false,
     "exportAllDatasets": false,
     "exportManagedFS": false,
@@ -14,12 +14,7 @@
     "exportKnowledgeBank": false,
     "exportPromptStudioHistories": false,
     "exportInsightsData": false,
-    "includedDatasetsData": [
-      {
-        "name": "openings_dedup",
-        "type": "S3"
-      }
-    ],
+    "includedDatasetsData": [],
     "includedSavedModels": [],
     "includedManagedFolders": [],
     "includedModelEvaluationStores": [],
