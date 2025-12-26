@@ -60,7 +60,7 @@
               "partitionsSpec": ""
             }
           ],
-          "jobType": "REVERSE_FORCED_BUILD",
+          "jobType": "FIND_OUTPUTS_RECURSIVE_BUILD",
           "autoUpdateSchemaBeforeEachRecipeRun": false,
           "stopAtFlowZoneBoundary": false,
           "refreshHiveMetastore": true,
