@@ -41,7 +41,7 @@
         "id": "build_4_true_d_games_prepared",
         "type": "build_flowitem",
         "name": "Step #1",
-        "enabled": false,
+        "enabled": true,
         "alwaysShowComment": false,
         "runConditionType": "RUN_IF_STATUS_MATCH",
         "runConditionStatuses": [
@@ -65,55 +65,6 @@
           "stopAtFlowZoneBoundary": false,
           "refreshHiveMetastore": true,
           "handleWarningsAs": "WARNING",
-          "proceedOnFailure": false
-        }
-      },
-      {
-        "id": "set_project_vars",
-        "type": "set_project_vars",
-        "name": "Step #2",
-        "enabled": true,
-        "alwaysShowComment": false,
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "delayBetweenRetries": 10,
-        "maxRetriesOnFail": 0,
-        "params": {
-          "variables": {},
-          "definitions": [
-            {
-              "key": "endDate",
-              "value": "concat(datePart(now(), \"year\", \"UTC\"), \"-\", datePart(now(), \"month\", \"UTC\"))"
-            }
-          ],
-          "evaluateValues": true
-        }
-      },
-      {
-        "id": "custom_python_mFBDMPiUEIFbtncjAXA4ug",
-        "type": "custom_python",
-        "name": "Step #3",
-        "enabled": true,
-        "alwaysShowComment": false,
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "delayBetweenRetries": 10,
-        "maxRetriesOnFail": 0,
-        "params": {
-          "script": "import dataiku\n\nproject \u003d dataiku.Project()\nvariables \u003d project.get_variables()\nprint(variables)",
-          "envSelection": {
-            "envMode": "INHERIT"
-          },
           "proceedOnFailure": false
         }
       }
