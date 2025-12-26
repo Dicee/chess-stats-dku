@@ -110,7 +110,7 @@
         "delayBetweenRetries": 10,
         "maxRetriesOnFail": 0,
         "params": {
-          "script": "print(variables[\u0027endDate\u0027])",
+          "script": "project \u003d dataiku.Project()\nvariables \u003d project.get_variables()\nprint(variables[\u0027endDate\u0027])",
           "envSelection": {
             "envMode": "INHERIT"
           },
