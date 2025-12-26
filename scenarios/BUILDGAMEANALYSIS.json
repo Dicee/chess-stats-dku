@@ -41,7 +41,7 @@
         "id": "build_4_true_d_games_prepared",
         "type": "build_flowitem",
         "name": "Step #1",
-        "enabled": true,
+        "enabled": false,
         "alwaysShowComment": false,
         "runConditionType": "RUN_IF_STATUS_MATCH",
         "runConditionStatuses": [
@@ -92,6 +92,29 @@
             }
           ],
           "evaluateValues": true
+        }
+      },
+      {
+        "id": "custom_python_mFBDMPiUEIFbtncjAXA4ug",
+        "type": "custom_python",
+        "name": "Step #3",
+        "enabled": true,
+        "alwaysShowComment": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "script": "print(variables[\u0027endDate\u0027])",
+          "envSelection": {
+            "envMode": "INHERIT"
+          },
+          "proceedOnFailure": false
         }
       }
     ]
