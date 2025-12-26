@@ -601,12 +601,12 @@ if len(chess_com_username) > 0:
     args.extend(['--chess-com-username', chess_com_username])
 
 if len(lichess_username) > 0:
-    args.extend(['--lichess-username', lichess_username]
+    args.extend(['--lichess-username', lichess_username])
 
 games_file = cli(args)
 upload_directory_contents(Path("pgn-cache"), managed_folder, "pgn-cache")
 
-logger.info(f"Uploading games file {games_file} to managed folder...", "pgn-cache")
+logger.info(f"Uploading games file {games_file} to managed folder...")
 with open(games_file, 'rb') as f:
     managed_folder.upload_stream(games_file, f)
 
